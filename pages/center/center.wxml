@@ -1,0 +1,50 @@
+<!--pages/center/center.wxml-->
+<view class="page__bd">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  
+  <!-- 我的 -->
+    <view class="weui-grids border_t10">
+          <block wx:for="{{myFunList}}" wx:key="*this" wx:for-index="index"wx:for-item="item">
+              <navigator url="{{item.url}}" class="weui-grid" hover-class="weui-grid_active">
+                  <image class="weui-grid__icon" src="{{item.picUrl}}" />
+                  <view class="weui-grid__label">{{item.name}}</view>
+              </navigator>
+          </block>
+    </view>
+
+ <!-- 我的资产 -->
+   <view class="weui-panel weui-panel_access border_t10">
+      <view class="weui-panel__hd">我的资产</view>
+      <view class="weui-panel__bd"> 
+        <view class="weui-grids border0">
+            <block wx:for="{{myAssetsList}}" wx:key="*this" wx:for-index="index"wx:for-item="item">
+                <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="{{item.picUrl}}" />
+                    <view class="weui-grid__label">{{item.name}}</view>
+                </navigator>
+            </block>
+        </view>
+      </view>
+    </view>
+
+   <!-- 更多推荐 -->
+   <view class="weui-panel weui-panel_access border_t10">
+      <view class="weui-panel__hd">更多推荐</view>
+      <view class="weui-panel__bd"> 
+        <view class="weui-grids border0">
+            <block wx:for="{{introList}}" wx:key="*this" wx:for-index="index"wx:for-item="item">
+                <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="{{item.picUrl}}" />
+                    <view class="weui-grid__label">{{item.name}}</view>
+                </navigator>
+            </block>
+        </view>
+      </view>
+    </view>
+  </view>

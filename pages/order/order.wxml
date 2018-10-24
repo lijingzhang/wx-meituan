@@ -1,0 +1,79 @@
+<!--pages/order/order.wxml-->
+<view class="page gray_bg">
+    <view class="page__bd">
+        <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd "> <image class="logoimg" src="/images/shop.png" />麦当劳</view>
+            <view class="weui-panel__bd">
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb" src="/images/eg.png" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">那么大鸡排</view>
+                        <view class="weui-media-box__desc">X1</view>
+                    </view>
+                     <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__desc tr">￥11</view>
+                    </view>
+                </navigator>
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb" src="/images/eg.png" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">那么大鸡排</view>
+                        <view class="weui-media-box__desc">X1</view>
+                    </view>
+                     <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__desc tr">￥11</view>
+                    </view>
+                </navigator>
+            </view>
+            <view class="weui-panel__ft">
+                <view class="weui-cell weui-cell_access weui-cell_link">
+                    <view class="weui-cell__bd"></view>
+                    <view class="weui-cell__ft  f12">共2件商品，实付<view class='red inblock'>￥22</view>
+                    <view  class='mt5'> <button class="weui-btn" type="primary"  plain="true" size="mini">再来一单</button></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd "> <image class="logoimg" src="/images/shop.png" />麦当劳</view>
+            <view class="weui-panel__bd">
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb" src="/images/eg.png" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">那么大鸡排</view>
+                        <view class="weui-media-box__desc">X1</view>
+                    </view>
+                     <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__desc tr">￥11</view>
+                    </view>
+                </navigator>
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb" src="/images/eg.png" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">那么大鸡排</view>
+                        <view class="weui-media-box__desc">X1</view>
+                    </view>
+                     <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__desc tr">￥11</view>
+                    </view>
+                </navigator>
+            </view>
+            <view class="weui-panel__ft">
+                <view class="weui-cell weui-cell_access weui-cell_link">
+                    <view class="weui-cell__bd"></view>
+                    <view class="weui-cell__ft  f12">共2件商品，实付<view class='red inblock'>￥22</view>
+                    <view class='mt5'> <button class="weui-btn" type="primary"  plain="true" size="mini">再来一单</button></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

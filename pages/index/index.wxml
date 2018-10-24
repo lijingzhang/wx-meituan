@@ -1,0 +1,252 @@
+<!--index.wxml-->
+<view class="page">
+    <view class="weui-flex">
+        <view class='pr10'>
+          <image class='address' src='/images/address.png'></image>  梅园大酒店
+        </view>
+        <view class="weui-flex__item">
+          <view class='weui-search-bar__form'>
+            <view class="weui-search-bar__box">
+              <navigator url="/pages/search/search">
+                 <icon class="weui-icon-search_in-box" type="search" size="14"></icon>搜索
+              </navigator>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="page__bd menu">
+        <view class="weui-grids ">
+            <block >
+                <navigator url="/pages/shop/shop" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="/images/hamburger.png" />
+                    <view class="weui-grid__label">汉堡</view>
+                </navigator>
+            </block>
+             <block >
+                <navigator url="/pages/shop/shop" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="/images/chinesefood.png" />
+                    <view class="weui-grid__label">中餐</view>
+                </navigator>
+            </block>
+             <block >
+                <navigator url="/pages/shop/shop" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="/images/juice.png" />
+                    <view class="weui-grid__label">饮料</view>
+                </navigator>
+            </block>
+             <block >
+                <navigator url="/pages/shop/shop" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="/images/coffee.png" />
+                    <view class="weui-grid__label">咖啡</view>
+                </navigator>
+            </block>
+             <block >
+                <navigator url="/pages/shop/shop" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="/images/chicken.png" />
+                    <view class="weui-grid__label">炸鸡</view>
+                </navigator>
+            </block>
+             <block >
+                <navigator url="/pages/shop/shop" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="/images/fruit.png" />
+                    <view class="weui-grid__label">水果</view>
+                </navigator>
+            </block>
+        </view>
+    </view>
+       
+    <view  class="weui-article__h1 mb0">附近商家</view>
+     <!-- <view class="weui-flex sort">
+            <view class="weui-flex__item "><view class="placeholder">综合排序</view></view>
+            <view class="weui-flex__item"><view class="placeholder">销量排序</view></view>
+            <view class="weui-flex__item"><view class="placeholder">距离排序</view></view>
+      </view> -->
+    <view>
+    <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                
+                <view class="weui-panel__bd">
+                 <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb"  src="/images/shop.png" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">麦当劳</view>
+                        <view class="weui-media-box__desc">
+                          <view class="weui-cell p0 border0">
+                          <view class="weui-cell__bd">月售5598</view>
+                        </view>
+                        <view class='f12 mt5 mb5'>
+                          起送￥20 | 配送￥1 | 人均￥13
+                        </view>
+                        <view class='f12'>快餐小吃</view>
+                        </view>
+                    </view>
+                     <view class="inblock">
+                        <view class="weui-media-box__desc tr"> <view sclass='f12'>33分钟 | 3.1km</view></view>
+                    </view>
+                </navigator>
+                 <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb"  src="/images/shop.png" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">麦当劳</view>
+                        <view class="weui-media-box__desc">
+                          <view class="weui-cell p0 border0">
+                          <view class="weui-cell__bd">月售5598</view>
+                        </view>
+                        <view class='f12 mt5 mb5'>
+                          起送￥20 | 配送￥1 | 人均￥13
+                        </view>
+                        <view class='f12'>快餐小吃</view>
+                        </view>
+                    </view>
+                     <view class="inblock">
+                        <view class="weui-media-box__desc tr"> <view sclass='f12'>33分钟 | 3.1km</view></view>
+                    </view>
+                </navigator>
+                 <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb"  src="/images/shop.png" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">麦当劳</view>
+                        <view class="weui-media-box__desc">
+                          <view class="weui-cell p0 border0">
+                          <view class="weui-cell__bd">月售5598</view>
+                        </view>
+                        <view class='f12 mt5 mb5'>
+                          起送￥20 | 配送￥1 | 人均￥13
+                        </view>
+                        <view class='f12'>快餐小吃</view>
+                        </view>
+                    </view>
+                     <view class="inblock">
+                        <view class="weui-media-box__desc tr"> <view sclass='f12'>33分钟 | 3.1km</view></view>
+                    </view>
+                </navigator>
+                 <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb"  src="/images/shop.png" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">麦当劳</view>
+                        <view class="weui-media-box__desc">
+                          <view class="weui-cell p0 border0">
+                          <view class="weui-cell__bd">月售5598</view>
+                        </view>
+                        <view class='f12 mt5 mb5'>
+                          起送￥20 | 配送￥1 | 人均￥13
+                        </view>
+                        <view class='f12'>快餐小吃</view>
+                        </view>
+                    </view>
+                     <view class="inblock">
+                        <view class="weui-media-box__desc tr"> <view sclass='f12'>33分钟 | 3.1km</view></view>
+                    </view>
+                </navigator>
+                 <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb"  src="/images/shop.png" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">麦当劳</view>
+                        <view class="weui-media-box__desc">
+                          <view class="weui-cell p0 border0">
+                          <view class="weui-cell__bd">月售5598</view>
+                        </view>
+                        <view class='f12 mt5 mb5'>
+                          起送￥20 | 配送￥1 | 人均￥13
+                        </view>
+                        <view class='f12'>快餐小吃</view>
+                        </view>
+                    </view>
+                     <view class="inblock">
+                        <view class="weui-media-box__desc tr"> <view sclass='f12'>33分钟 | 3.1km</view></view>
+                    </view>
+                </navigator>
+            </view>
+                
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                   <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb"  src="/images/shop.png" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">必胜客</view>
+                        <view class="weui-media-box__desc">
+                          <view class="weui-cell p0 border0">
+                          <view class="weui-cell__bd">月售5598</view>
+                        </view>
+                        <view class='f12 mt5 mb5'>
+                          起送￥20 | 配送￥1 | 人均￥13
+                        </view>
+                        <view class='f12'>快餐小吃</view>
+                        </view>
+                    </view>
+                     <view class="inblock">
+                        <view class="weui-media-box__desc tr"> <view sclass='f12'>33分钟 | 3.1km</view></view>
+                    </view>
+                </navigator>
+                 <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb"  src="/images/shop.png" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">必胜客</view>
+                        <view class="weui-media-box__desc">
+                          <view class="weui-cell p0 border0">
+                          <view class="weui-cell__bd">月售5598</view>
+                        </view>
+                        <view class='f12 mt5 mb5'>
+                          起送￥20 | 配送￥1 | 人均￥13
+                        </view>
+                        <view class='f12'>快餐小吃</view>
+                        </view>
+                    </view>
+                     <view class="inblock">
+                        <view class="weui-media-box__desc tr"> <view sclass='f12'>33分钟 | 3.1km</view></view>
+                    </view>
+                </navigator>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                
+                   <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb"  src="/images/shop.png" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">肯德基</view>
+                        <view class="weui-media-box__desc">
+                          <view class="weui-cell p0 border0">
+                          <view class="weui-cell__bd">月售5598</view>
+                        </view>
+                        <view class='f12 mt5 mb5'>
+                          起送￥20 | 配送￥1 | 人均￥13
+                        </view>
+                        <view class='f12'>快餐小吃</view>
+                        </view>
+                    </view>
+                     <view class="inblock">
+                        <view class="weui-media-box__desc tr"> <view sclass='f12'>33分钟 | 3.1km</view></view>
+                    </view>
+                </navigator>
+                </view>
+            </view>
+        </view> 
+      
+              
+    </view>
+</view>
+

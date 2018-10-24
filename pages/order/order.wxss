@@ -1,0 +1,4 @@
+/* pages/order/order.wxss */
+.logoimg{ width: 30px; height: 30px;  vertical-align: middle;border-radius: 4px;margin-right: 10px;}
+.weui-media-box__title{ font-size: 15px;}
+.page{ padding: 0}

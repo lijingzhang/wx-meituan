@@ -1,0 +1,22 @@
+/* pages/center/center.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;background: #fff;padding-bottom: 10px;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+.weui-cell__bd{ font-size: 14px;}
+.flex_block image{width: 40px;height: 40px;}
+.weui-grids{ border-left:0;}
+.weui-grid{ width: 25%; border: 0;padding: 10px;}
+.weui-panel{ margin-top: 0}
